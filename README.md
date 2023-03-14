@@ -16,20 +16,28 @@ Clone the repo somewhere and source it in `.tmux.conf`:
 run-shell "/path/to/bubbles.tmux"
 ```
 
-NOTE: Options should be set before sourcing.
-
 ## Options
 
-| Option         | Default     |
-| -------------- | ----------- |
-| status_justify | `'centre'`  |
-| modules_left   | `' #S '`    |
-| modules_right  | `' %F %T '` |
-| color_main     | `'#BD93F9'` |
-| color_active   | `'#EAEAEA'` |
-| color_grey     | `'#424242'` |
-| color_light    | `'#EAEAEA'` |
-| color_dark     | `'#282A2E'` |
+The default main color is inspired by [dracula](https://draculatheme.com/). You can modify it with the following command:
+
+```bash
+set -g @tmux_bubbles_color_main '#76bddb'
+```
+
+Here are all the options:
+
+| Option                      | Default     |
+| --------------------------- | ----------- |
+| tmux_bubbles_status_justify | `'centre'`  |
+| tmux_bubbles_modules_left   | `' #S '`    |
+| tmux_bubbles_modules_right  | `' %F %T '` |
+| tmux_bubbles_color_main     | `'#BD93F9'` |
+| tmux_bubbles_color_active   | `'#EAEAEA'` |
+| tmux_bubbles_color_grey     | `'#424242'` |
+| tmux_bubbles_color_light    | `'#EAEAEA'` |
+| tmux_bubbles_color_dark     | `'#282A2E'` |
+
+**NOTE**: Options should be set before sourcing.
 
 ## Credits
 
