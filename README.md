@@ -7,7 +7,7 @@
 Clone the repo somewhere and source it in `.tmux.conf`:
 
 ```bash
-run-shell "/path/to/tmux-power.tmux"
+run-shell "/path/to/bubbles.tmux"
 ```
 
 NOTE: Options should be set before sourcing.
