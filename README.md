@@ -2,6 +2,10 @@
 
 ![bubbles.tmux](https://user-images.githubusercontent.com/46901748/225083037-fdb93561-037f-432a-bc44-1b309d365216.png)
 
+## Requirements
+
+- [Nerd Font](https://www.nerdfonts.com/)
+
 ## Installation
 
 ### Install manually
