@@ -70,3 +70,4 @@ tmux set-option -gq window-status-current-format "$(make_bubble ' #I:#W#F ' "$co
 # Others                                                  *
 # *********************************************************
 tmux set-option -gq mode-style "bg=$color_main,fg=0"
+tmux set-option -gq pane-active-border-style "fg=$color_main,bg=0"
