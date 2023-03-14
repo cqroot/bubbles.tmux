@@ -26,16 +26,15 @@ set -g @tmux_bubbles_color_main '#76bddb'
 
 Here are all the options:
 
-| Option                      | Default     |
-| --------------------------- | ----------- |
-| tmux_bubbles_status_justify | `'centre'`  |
-| tmux_bubbles_modules_left   | `' #S '`    |
-| tmux_bubbles_modules_right  | `' %F %T '` |
-| tmux_bubbles_color_main     | `'#BD93F9'` |
-| tmux_bubbles_color_active   | `'#EAEAEA'` |
-| tmux_bubbles_color_grey     | `'#424242'` |
-| tmux_bubbles_color_light    | `'#EAEAEA'` |
-| tmux_bubbles_color_dark     | `'#282A2E'` |
+| Option                     | Default     |
+| -------------------------- | ----------- |
+| tmux_bubbles_modules_left  | `' #S '`    |
+| tmux_bubbles_modules_right | `' %F %T '` |
+| tmux_bubbles_color_main    | `'#BD93F9'` |
+| tmux_bubbles_color_active  | `'#EAEAEA'` |
+| tmux_bubbles_color_grey    | `'#424242'` |
+| tmux_bubbles_color_light   | `'#EAEAEA'` |
+| tmux_bubbles_color_dark    | `'#282A2E'` |
 
 **NOTE**: Options should be set before sourcing.
 

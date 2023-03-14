@@ -11,7 +11,6 @@ tmux_get() {
 # *********************************************************
 # Options                                                 *
 # *********************************************************
-status_justify="$(tmux_get @tmux_bubbles_status_justify centre)"
 modules_left="$(tmux_get @tmux_bubbles_modules_left ' #S ')"
 modules_right="$(tmux_get @tmux_bubbles_modules_right ' %F %T ')"
 color_main=$(tmux_get @tmux_bubbles_color_main '#BD93F9')
@@ -23,7 +22,7 @@ color_dark=$(tmux_get @tmux_bubbles_color_dark '#282A2E')
 # *********************************************************
 # Status                                                  *
 # *********************************************************
-tmux set-option -gq status-justify "$status_justify"
+tmux set-option -gq status-justify centre
 tmux set-option -gq status-interval 1
 tmux set-option -gq status on
 tmux set-option -gq status-fg "$color_light"
