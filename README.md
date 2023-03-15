@@ -16,6 +16,12 @@ Clone the repo somewhere and source it in `.tmux.conf`:
 run-shell "/path/to/bubbles.tmux"
 ```
 
+### Install using [TPM](https://github.com/tmux-plugins/tpm)
+
+```bash
+set -g @plugin 'cqroot/bubbles.tmux'
+```
+
 ## 🧩 Options
 
 The default main color is inspired by [dracula](https://draculatheme.com/). You can modify it with the following command:
