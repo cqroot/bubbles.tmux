@@ -26,14 +26,14 @@ tmux set-option -gq status-justify centre
 tmux set-option -gq status-interval 1
 tmux set-option -gq status on
 tmux set-option -gq status-fg "$color_light"
-tmux set-option -gq status-bg "0"
+tmux set-option -gq status-bg "default"
 tmux set-option -gq status-attr none
 
 # $1: modules
 # $2: fg_color
 # $3: bg_color
 make_bubble() {
-	echo "#[fg=$3]#[bg=0]#[fg=$2]#[bg=$3]$1#[fg=$3]#[bg=0]"
+	echo "#[fg=$3]#[bg=default]#[fg=$2]#[bg=$3]$1#[fg=$3]#[bg=default]"
 }
 
 # $1: modules
@@ -50,10 +50,10 @@ tmux set-option -gq status-left "$(make_activatable_bubble "$modules_left")"
 tmux set-option -gq status-right "$(make_activatable_bubble "$modules_right")"
 
 tmux set-option -gq status-left-fg "$color_light"
-tmux set-option -gq status-left-bg "0"
+tmux set-option -gq status-left-bg "default"
 tmux set-option -gq status-left-length 150
 tmux set-option -gq status-right-fg "$color_light"
-tmux set-option -gq status-right-bg "0"
+tmux set-option -gq status-right-bg "default"
 tmux set-option -gq status-right-length 150
 
 # *********************************************************
@@ -62,12 +62,12 @@ tmux set-option -gq status-right-length 150
 tmux set-option -gq window-status-format ' #I #W'
 tmux set-option -gq window-status-current-format ' #I #W'
 
-tmux set-option -gq window-status-format "#[fg=$color_light,bg=0,bold] #I:#W "
+tmux set-option -gq window-status-format "#[fg=$color_light,bg=default,bold] #I:#W "
 tmux set-option -gq window-status-current-format "$(make_bubble ' #I:#W ' "$color_light" "$color_grey")"
 
 # *********************************************************
 # Others                                                  *
 # *********************************************************
 tmux set-option -gq mode-style "bg=$color_main,fg=0"
-tmux set-option -gq pane-active-border-style "fg=$color_main,bg=0"
+tmux set-option -gq pane-active-border-style "fg=$color_main,bg=default"
 tmux set-option -gq clock-mode-colour "$color_main"
