@@ -3,9 +3,9 @@
 # $1: option
 # $2: default value
 tmux_get() {
-	local value
-	value="$(tmux show -gqv "$1")"
-	[ -n "$value" ] && echo "$value" || echo "$2"
+    local value
+    value="$(tmux show -gqv "$1")"
+    [ -n "$value" ] && echo "$value" || echo "$2"
 }
 
 # *********************************************************
@@ -25,25 +25,24 @@ color_dark=$(tmux_get @tmux_bubbles_color_dark '#282A2E')
 tmux set-option -gq status-justify centre
 tmux set-option -gq status-interval 1
 tmux set-option -gq status on
-tmux set-option -gq status-fg "$color_light"
-tmux set-option -gq status-bg "default"
+tmux set -g status-style "bg=default,fg=${color_light}"
 tmux set-option -gq status-attr none
 
 # $1: modules
 # $2: fg_color
 # $3: bg_color
 make_bubble() {
-	echo "#[fg=$3]#[bg=default]#[fg=$2]#[bg=$3]$1#[fg=$3]#[bg=default]"
+    echo "#[fg=$3]#[bg=default]#[fg=$2]#[bg=$3]$1#[fg=$3]#[bg=default]"
 }
 
 # $1: modules
 make_activatable_bubble() {
-	local normal_bubble
-	local active_bubble
-	normal_bubble="$(make_bubble "$1" "$color_dark" "$color_main")"
-	active_bubble="$(make_bubble "$1" "$color_dark" "$color_active")"
+    local normal_bubble
+    local active_bubble
+    normal_bubble="$(make_bubble "$1" "$color_dark" "$color_main")"
+    active_bubble="$(make_bubble "$1" "$color_dark" "$color_active")"
 
-	echo "#{?client_prefix,$active_bubble,$normal_bubble}"
+    echo "#{?client_prefix,$active_bubble,$normal_bubble}"
 }
 
 tmux set-option -gq status-left "$(make_activatable_bubble "$modules_left")"
